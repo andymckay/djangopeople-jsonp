@@ -56,7 +56,8 @@ def parse(name):
     if lng:
         data["longitude"] = lng[0]
 
-    data["picture"] = 'http://djangopeople.net' + data["picture"]
+    if "picture" in data:
+        data["picture"] = 'http://djangopeople.net' + data["picture"]
 
     return data
     
